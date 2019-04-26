@@ -22,13 +22,20 @@ const forecast = (latitude, longitude, callback) => {
             //no error
             const temp = body.currently.temperature 
             const preciptProb = body.currently.precipProbability 
+            const temperatureHigh = body.daily.data[0].temperatureHigh
+            const temperatureLow = body.daily.data[0].temperatureLow
             callback(undefined, 
                     body.daily.data[0].summary
                     +  " It is currently " 
                     +  temp 
-                    + " degrees Celsius out. There is a " 
-                    + preciptProb 
-                    + "% chance of rain.")
+                    + " degrees Celsius out." 
+                    + " The temperateure today peaks at " 
+                    + temperatureHigh 
+                    + " with a low of "
+                    + temperatureLow 
+                    + ". There is a "
+                    + preciptProb
+                    + "% chance of rain. ")
         }
     })
 }
