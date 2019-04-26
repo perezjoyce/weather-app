@@ -6,6 +6,10 @@ const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
 
 const app = express()
+//process.env.PORT for heroku
+// 3000 for local
+//OR allows our app to have a default fallback
+const port = process.env.PORT || 3000
 
 //DEFINE PATHS FOR EXPRESS CONFIG
 const publicDirectoryPath = path.join(__dirname, '../public')
@@ -112,7 +116,7 @@ app.get('*', (req, res) => {
 
 
 //START UP THE SERVER (3000 is a common development port)
-app.listen(3000, () => {
-    console.log('Server is up on port 3000.') //not displayed on the browser
+app.listen(port, () => {
+    console.log('Server is up on port' + port + '.') //not displayed on the browser
 })
 
