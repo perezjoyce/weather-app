@@ -38,7 +38,6 @@ app.get('/about', (req, res) => {
     res.render('about', {
         title: 'About Me',
         name: 'Joyce Perez',
-        description: 'fat'
     })
 })
 
@@ -54,7 +53,7 @@ app.get('/weather', (req, res) => {
 
     if(!req.query.address) {
         return res.send({
-            error: 'You must provide address'
+            error: 'You must provide an address.'
         })
     }
 
@@ -84,7 +83,7 @@ app.get('/products', (req, res) => {
     //when there is no search term
     if (!req.query.search) {
         return res.send({
-            error : 'You must provide a search term'
+            error : 'You must provide a search term.'
         })
     }
     
@@ -99,7 +98,7 @@ app.get('/help/*', (req, res) => {
     res.render('404', {
         title: '404 Page',
         name: 'Joyce Perez',
-        message: "Help article not found"
+        message: "Help article not found."
     })
 })
 

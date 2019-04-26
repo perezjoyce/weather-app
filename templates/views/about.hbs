@@ -12,8 +12,10 @@
     <div class="main-content">
         {{>header}}
         <img src="/img/me.jpg" alt="joyce" class="portrait">
-        <p>Name: {{ name }}</p>
-        <p>Description: {{ description}}</p> 
+        <p>This weather app was created by {{ name }}.</p> 
+        <p>It uses Node.js and data from 
+            <a href="https://www.mapbox.com/" target="_blank">mapbox.com</a> and 
+            <a href="https://darksky.net/forecast/40.7127,-74.0059/us12/en" target="_blank">darksky.net</a>.</p>
     </div>
   
     {{>footer}}

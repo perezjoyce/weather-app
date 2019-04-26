@@ -11,6 +11,10 @@ body {
     min-height: 100vh;
 }
 
+hr {
+    border: .5px solid gray;
+}
+
 .main-content {
     /* main content should 
     take up all leftover space */
@@ -50,7 +54,7 @@ button {
     margin-top: 3em;
 }
 
-a {
+.header-link {
     color: #888888;
     margin-right: 16px;
     text-decoration: none;
