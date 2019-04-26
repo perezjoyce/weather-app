@@ -29,7 +29,7 @@ const forecast = (latitude, longitude, callback) => {
                     +  " It is currently " 
                     +  temp 
                     + " degrees Celsius out." 
-                    + " The temperateure today peaks at " 
+                    + " The temperature today peaks at " 
                     + temperatureHigh 
                     + " with a low of "
                     + temperatureLow 
